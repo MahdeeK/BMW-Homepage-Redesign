@@ -1,0 +1,162 @@
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 430px;
+    background-color: #ffffff; 
+    color: #000000;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+    overflow-y: hidden;
+}
+
+.side-menu.is-open {
+    transform: translateX(0);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    margin-inline: 16px;
+}
+
+.back-button-placeholder {
+    width: 32px;
+    padding: 8px; 
+}
+
+.drill-icon,
+.ri-close-line,
+.ri-arrow-left-long-line {
+    font-size: 24px;
+    transition: all 0.4s ease;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.ri-close-line:hover,
+.ri-arrow-left-long-line:hover {
+    background-color: hsla(0, 0%, 0%, 0.1);
+    padding: 8px;
+}
+
+.menu-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56px);
+    justify-content: space-between;
+}
+
+.menu-animation-container {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu-panel {
+    width: 50%;
+    flex-shrink: 0; 
+    overflow-y: auto; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.menu-animation-container.drilled-down {
+    transform: translateX(-50%);
+}
+
+.menu-content {
+    flex-grow: 1; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.categories-list {
+    list-style: none;
+    padding: 16px;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px;
+    padding-block: 8px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.category-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.category-item:hover .drill-icon {
+    transform: translateX(4px);
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    padding: 12px 20px;
+}
+
+.item-url {
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+}
+
+.bottom-menu {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 16px;
+    gap: 16px;
+}
+
+.menu-button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.menu-button:hover {
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.option-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    padding-bottom: 16px;
+}
+
+@media screen and (max-width: 430px) {
+    .side-menu {
+        width: 100vw;
+    }
+
+    .categories-list {
+        list-style: none;
+        padding: 0px;
+    }
+}
