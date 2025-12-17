@@ -6,7 +6,7 @@ function Footer() {
       <div className="content-wrapper">
         <div className="newsletter-container">
           <div className="newsletter-text">
-            <img src="src/assets/pictures/BMW.png" alt="BMW logo" className="logo" style={{width: 'clamp(32px, 5vw, 64px)', height: 'clamp(32px, 5vw, 64px)'}}/>
+            <img src="/BMW-Homepage-Redesign/pictures/BMW.png" alt="BMW logo" className="logo" style={{width: 'clamp(32px, 5vw, 64px)', height: 'clamp(32px, 5vw, 64px)'}}/>
             <p>Stay up to date with all things BMW.</p>
           </div>
           <div className="button-container">

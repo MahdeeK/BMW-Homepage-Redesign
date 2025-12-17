@@ -23,7 +23,7 @@ function Navbar() {
             </div>
             <p className="menu-text">Menu</p>
           </div>
-          <img src="src/assets/pictures/BMW.png" alt="BMW logo" className="logo"/>
+          <img src="/BMW-Homepage-Redesign/pictures/BMW.png" alt="BMW logo" className="logo"/>
           <a href="https://www.bmw.ca/en/ssl/MyAccount.html" target="_blank"><i class="ri-user-6-line"></i></a>
         </div>
         <SideNav isMenuOpen={isNavOpen} onClose={toggleNav}/> 

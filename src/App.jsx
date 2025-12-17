@@ -26,7 +26,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="gradient" />
-      <video className="hero-video" src="src/assets/videos/HeroVideo.mov" autoPlay loop muted></video>
+      <video className="hero-video" src="/BMW-Homepage-Redesign/videos/HeroVideo.mov" autoPlay loop muted></video>
       <Navbar />
       <div className="hero-text">
         <p className="hero-headline">Sheer Driving Pleasure</p>
@@ -46,14 +46,14 @@ function Hero() {
 
 function Models() {
   const allModels = [
-    { modelName: "X Series", modelImage: "src/assets/pictures/XSeries.jpg", modelCaption: "Versatile utility meets sophisticated, clean design.", modelTags: "Gasoline | Hybrid", modelVideo: "src/assets/videos/XSeries.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=x"},
-    { modelName: "M Series", modelImage: "src/assets/pictures/MSeries.avif", modelCaption: "Uncompromising performance, precision driving redefined.", modelTags: "Gasoline | Hybrid | Electric", modelVideo: "src/assets/videos/MSeries.mov", modelURL: "https://www.bmw.ca/en/all-models.html?bmwM=yes"},
-    { modelName: "2 Series", modelImage: "src/assets/pictures/2Series.jpg", modelCaption: "Compact power meets sporty, agile dynamics.", modelTags: "Gasoline", modelVideo: "src/assets/videos/2Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=2"},
-    { modelName: "3 & 4 Series", modelImage: "src/assets/pictures/3&4Series.jpg", modelCaption: "Perfect balance of performance and iconic style.", modelTags: "Gasoline | Electric", modelVideo: "src/assets/videos/3&4Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=3,4"},
-    { modelName: "5 Series", modelImage: "src/assets/pictures/5Series.webp", modelCaption: "Advanced digital luxury for the business class.", modelTags: "Gasoline | Hybrid | Electric", modelVideo: "src/assets/videos/5Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=5"},
-    { modelName: "6 Series", modelImage: "src/assets/pictures/6Series.jpg", modelCaption: "Space, comfort, and elegance for any distance.", modelTags: "Gasoline | Hybrid", modelVideo: "src/assets/videos/6Series.mov", modelURL: "https://www.bmw.ca/en/ssl/PreOwnedSearch.html"},
-    { modelName: "7 & 8 Series", modelImage: "src/assets/pictures/7&8Series.webp", modelCaption: "Masterful design meets the pinnacle of comfort.", modelTags: "Gasoline | Hybrid | Electric", modelVideo: "src/assets/videos/7&8Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=7,8"},
-    { modelName: "i Series", modelImage: "src/assets/pictures/iSeries.jpg", modelCaption: "Innovative electric mobility with dynamic performance.", modelTags: "Electric", modelVideo: "src/assets/videos/iSeries.mov", modelURL: "https://www.bmw.ca/en/all-models.html?fuelType=e"},
+    { modelName: "X Series", modelImage: "/BMW-Homepage-Redesign/pictures/XSeries.jpg", modelCaption: "Versatile utility meets sophisticated, clean design.", modelTags: "Gasoline | Hybrid", modelVideo: "/BMW-Homepage-Redesign/videos/XSeries.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=x"},
+    { modelName: "M Series", modelImage: "/BMW-Homepage-Redesign/pictures/MSeries.avif", modelCaption: "Uncompromising performance, precision driving redefined.", modelTags: "Gasoline | Hybrid | Electric", modelVideo: "/BMW-Homepage-Redesign/videos/MSeries.mov", modelURL: "https://www.bmw.ca/en/all-models.html?bmwM=yes"},
+    { modelName: "2 Series", modelImage: "/BMW-Homepage-Redesign/pictures/2Series.jpg", modelCaption: "Compact power meets sporty, agile dynamics.", modelTags: "Gasoline", modelVideo: "/BMW-Homepage-Redesign/videos/2Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=2"},
+    { modelName: "3 & 4 Series", modelImage: "/BMW-Homepage-Redesign/pictures/3&4Series.jpg", modelCaption: "Perfect balance of performance and iconic style.", modelTags: "Gasoline | Electric", modelVideo: "/BMW-Homepage-Redesign/videos/3&4Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=3,4"},
+    { modelName: "5 Series", modelImage: "/BMW-Homepage-Redesign/pictures/5Series.webp", modelCaption: "Advanced digital luxury for the business class.", modelTags: "Gasoline | Hybrid | Electric", modelVideo: "/BMW-Homepage-Redesign/videos/5Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=5"},
+    { modelName: "6 Series", modelImage: "/BMW-Homepage-Redesign/pictures/6Series.jpg", modelCaption: "Space, comfort, and elegance for any distance.", modelTags: "Gasoline | Hybrid", modelVideo: "/BMW-Homepage-Redesign/videos/6Series.mov", modelURL: "https://www.bmw.ca/en/ssl/PreOwnedSearch.html"},
+    { modelName: "7 & 8 Series", modelImage: "/BMW-Homepage-Redesign/pictures/7&8Series.webp", modelCaption: "Masterful design meets the pinnacle of comfort.", modelTags: "Gasoline | Hybrid | Electric", modelVideo: "/BMW-Homepage-Redesign/videos/7&8Series.mov", modelURL: "https://www.bmw.ca/en/all-models.html?series=7,8"},
+    { modelName: "i Series", modelImage: "/BMW-Homepage-Redesign/pictures/iSeries.jpg", modelCaption: "Innovative electric mobility with dynamic performance.", modelTags: "Electric", modelVideo: "/BMW-Homepage-Redesign/videos/iSeries.mov", modelURL: "https://www.bmw.ca/en/all-models.html?fuelType=e"},
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -171,7 +171,7 @@ function Models() {
 
 function Vehicles() {
   return (
-    <section className="vehicles" style={{backgroundImage: `url("src/assets/pictures/vehicleBackground.jpg")`}}>
+    <section className="vehicles" style={{backgroundImage: `url("/BMW-Homepage-Redesign/pictures/vehicleBackground.jpg")`}}>
       <motion.div 
         className="vehicle-text"
         initial={{ opacity: 0, y: 20 }}
@@ -203,17 +203,8 @@ function Offers() {
     visible: {
       opacity: 1,
       transition: {
-      staggerChildren: 0.2, 
+        staggerChildren: 0.2, 
       },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
     },
   };
 
@@ -232,24 +223,37 @@ function Offers() {
         <motion.a 
           href="https://www.bmw.ca/en/ssl/SpecialOffers.html" 
           target="_blank"
-          variants={itemVariants}
         >
-          <OfferCard href="https://www.bmw.ca/en/ssl/SpecialOffers.html" title="The Road Home Sales Event" caption="Secure exceptional lease rates for a limited time on select new BMW models. Your path to ownership starts here." imageURL="src/assets/pictures/BMWRoadHomeSale.jpg" backgroundPosition="55% 50%"/>
+          <OfferCard 
+            href="https://www.bmw.ca/en/ssl/SpecialOffers.html" 
+            title="The Road Home Sales Event" 
+            caption="Secure exceptional lease rates for a limited time on select new BMW models. Your path to ownership starts here." 
+            imageURL="/BMW-Homepage-Redesign/pictures/BMWRoadHomeSale.jpg" 
+            backgroundPosition="55% 50%"
+          />
         </motion.a>
         <motion.a 
           href="https://www.bmw.ca/en/ssl/SpecialOffers.html" 
           target="_blank"
-          initial={{ opacity: 0, y: 20 }}
-          variants={itemVariants}
         >
-          <OfferCard href="https://www.bmw.ca/en/ssl/SpecialOffers.html" title="The X5: Exclusive Offer" caption="Experience the legendary, one-of-a-kind, SUV with attractive terms. Discover how to save on your new X5 today." imageURL="src/assets/pictures/X5Offer.webp" backgroundPosition="80% 50%"/>
+          <OfferCard 
+            href="https://www.bmw.ca/en/ssl/SpecialOffers.html" 
+            title="The X5: Exclusive Offer" 
+            caption="Experience the legendary, one-of-a-kind, SUV with attractive terms. Discover how to save on your new X5 today." 
+            imageURL="/BMW-Homepage-Redesign/pictures/X5Offer.webp" 
+            backgroundPosition="80% 50%"
+          />
         </motion.a>
         <motion.a 
           href="https://www.bmw.ca/en/ssl/RequestTestDrive.html" 
           target="_blank"
-          variants={itemVariants}
         > 
-          <OfferCard href="https://www.bmw.ca/en/ssl/RequestTestDrive.html" title="The BMW Golf Experience" caption="Book a test drive for a chance to win a golf trip for two to Cabot Cape Breton, one of Canada’s prestigious courses." imageURL="src/assets/pictures/golfOffer.jpg" backgroundPosition="40% 50%"/>
+          <OfferCard 
+          href="https://www.bmw.ca/en/ssl/RequestTestDrive.html" 
+          title="The BMW Golf Experience" 
+          caption="Book a test drive for a chance to win a golf trip for two to Cabot Cape Breton, one of Canada’s prestigious courses." 
+          imageURL="/BMW-Homepage-Redesign/pictures/golfOffer.jpg" 
+          backgroundPosition="40% 50%"/>
         </motion.a>
       </motion.div>
     </section>
@@ -258,7 +262,7 @@ function Offers() {
 
 function Configure() {
   return (
-    <section className="configure" style={{backgroundImage: `url("src/assets/pictures/configureBackground.jpg")`, marginBottom: "24px"}}>
+    <section className="configure" style={{backgroundImage: `url("/BMW-Homepage-Redesign/pictures/configureBackground.jpg")`, marginBottom: "24px"}}>
       <motion.div 
         className="configure-text" 
         style={{maxWidth: "1310px"}}

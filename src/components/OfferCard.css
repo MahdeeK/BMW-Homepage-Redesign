@@ -9,7 +9,6 @@
     background-position: 80% 50%;
     background-size: cover;
     border-radius: 16px;
-    transition: background-color 0.5s ease;
 }
 
 .offer-info-wrapper {
