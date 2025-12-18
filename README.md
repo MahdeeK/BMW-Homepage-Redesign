@@ -1,1 +1,1 @@
-Redesigned website for BMW Canada. This redesign has no affiliation with BMW and is strictly meant for educational purposes.
+Redesigned website for BMW Canada. This redesign has no affiliation with BMW and is strictly meant for educational purposes. The live site is available at https://mahdeek.github.io/BMW-Homepage-Redesign/.
