@@ -90,6 +90,7 @@ function Footer() {
             </div>
           </a>
         </div>
+        <p className="disclaimer">This site is a UX case study and has no affiliation with BMW Canada or the BMW Group. It is purely for educational purposes.</p>
       </div>
     </footer>
   )

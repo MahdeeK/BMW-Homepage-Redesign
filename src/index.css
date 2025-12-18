@@ -8,6 +8,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   box-sizing: border-box;
+  overscroll-behavior-block: contain;
 }
 
 body:has(.is-open) {

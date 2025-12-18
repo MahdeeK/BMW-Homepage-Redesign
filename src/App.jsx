@@ -26,7 +26,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="gradient" />
-      <video className="hero-video" src="/BMW-Homepage-Redesign/videos/HeroVideo.mov" autoPlay loop muted></video>
+      <video className="hero-video" src="/BMW-Homepage-Redesign/videos/HeroVideo.mov" autoPlay loop muted playsInline></video>
       <Navbar />
       <div className="hero-text">
         <p className="hero-headline">Sheer Driving Pleasure</p>
@@ -61,16 +61,17 @@ function Models() {
   const cardRefs = useRef([]);
   const carouselRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
+  const [videoIsPlaying, setVideoIsPlaying] = useState(false);
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || videoIsPlaying) return;
 
     const timer = setInterval(() => {
       scrollToIndex((activeIndex + 1) % allModels.length);
     }, 4000);
 
     return () => clearInterval(timer);
-  }, [activeIndex, isPaused]);
+  }, [activeIndex, isPaused, videoIsPlaying, allModels.length]);
 
   const scrollToIndex = (index) => {
     const container = carouselRef.current;
@@ -148,7 +149,14 @@ function Models() {
               data-index={index}
               className="static-opacity-links"
             >
-              <ModelCard {...model} onVideoEnd={activeIndex === index ? handleVideoEnd : undefined}/>
+              <ModelCard 
+                {...model} 
+                isActive={activeIndex === index} 
+                onVideoEnd={activeIndex === index ? handleVideoEnd : undefined}
+                className={activeIndex === index ? "active-card" : "inactive-card"}
+                videoIsPlaying={videoIsPlaying}
+                setVideoIsPlaying={setVideoIsPlaying}
+              />
             </a>
           ))}
         </div>
